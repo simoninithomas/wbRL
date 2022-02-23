@@ -14,7 +14,7 @@ config = {
     env_name: "PongNoFrameskip-v4",
     num_envs: 8,
     total_timesteps: int(10e6),
-    seed=4089164106    
+    seed: 4089164106,    
 }
 
 run = wandb.init(
