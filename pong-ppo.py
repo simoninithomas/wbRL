@@ -34,10 +34,6 @@ env = VecFrameStack(env, n_stack=4)
 # Video recorder
 env = VecVideoRecorder(env, "videos", record_video_trigger=lambda x: x % 100000 == 0, video_length=2000)
 
-
-# Save a checkpoint every 1000 steps
-checkpoint_callback = 
-
 # https://github.com/DLR-RM/rl-trained-agents/blob/10a9c31e806820d59b20d8b85ca67090338ea912/ppo/PongNoFrameskip-v4_1/PongNoFrameskip-v4/config.yml
 model = PPO(policy = "CnnPolicy",
             env = env,
