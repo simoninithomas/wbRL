@@ -11,10 +11,10 @@ from wandb.integration.sb3 import WandbCallback
 from huggingface_sb3 import load_from_hub, push_to_hub
 
 config = {
-    env_name: "PongNoFrameskip-v4",
-    num_envs: 8,
-    total_timesteps: int(10e6),
-    seed: 4089164106,    
+    "env_name": "PongNoFrameskip-v4",
+    "num_envs": 8,
+    "total_timesteps": int(10e6),
+    "seed": 4089164106,    
 }
 
 run = wandb.init(
