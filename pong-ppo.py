@@ -29,6 +29,9 @@ run = wandb.init(
 # that will make and wrap atari environments correctly.
 # Here we are also multi-worker training (n_envs=8 => 8 environments)
 env = make_atari_env(config["env_name"], n_envs=config["num_envs"], seed=config["seed"]) #PongNoFrameskip-v4
+
+print("ENV ACTION SPACE: ", env.action_space.n)
+
 # Frame-stacking with 4 frames
 env = VecFrameStack(env, n_stack=4)
 # Video recorder
